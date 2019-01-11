@@ -4,7 +4,7 @@ describe('AgeCalculator', function() {
   let user;
 
   beforeEach(function() {
-    user = new AgeCalculator(32);
+    user = new AgeCalculator(32, "female", "high", "healthy");
   });
 
   describe('constructor', function() {
@@ -13,27 +13,33 @@ describe('AgeCalculator', function() {
     });
   });
 
-  describe('ageInMercuryYears', function() {
-    it('should calculate the user\'s age in Mercury years', function() {
-      expect(user.ageInMercuryYears()).toEqual(133.33333333333334);
+  describe('mercuryYears', function() {
+    it('should convert Earth years to Mercury years', function() {
+      expect(user.mercuryYears(user.ageInYears)).toEqual(133.33333333333334);
     });
   });
 
-  describe('ageInVenusYears', function() {
-    it('should calculate the user\'s age in Venus years', function() {
-      expect(user.ageInVenusYears()).toEqual(50);
+  describe('venusYears', function() {
+    it('should convert Earth years to Venus years', function() {
+      expect(user.venusYears(user.ageInYears)).toEqual(50);
     });
   });
 
-  describe('ageInMarsYears', function() {
-    it('should calculate the user\'s age in Mars years', function() {
-      expect(user.ageInMarsYears()).toEqual(17.021276595744681);
+  describe('marsYears', function() {
+    it('should convert Earth years to Mars years', function() {
+      expect(user.marsYears(user.ageInYears)).toEqual(17.021276595744681);
     });
   });
 
-  describe('ageInJupiterYears', function() {
-    it('should calculate the user\'s age in Mars years', function() {
-      expect(user.ageInJupiterYears()).toEqual(2.758620689655172);
+  describe('jupiterYears', function() {
+    it('should convert Earth years to Jupiter years', function() {
+      expect(user.jupiterYears(user.ageInYears)).toEqual(2.69814502529511);
+    });
+  });
+
+  describe('lifeExpectency', function() {
+    it('should calculate the user\'s life expectency in Earth years based on user input', function() {
+      expect(user.lifeExpectency().toEqual(80);
     });
   });
 
