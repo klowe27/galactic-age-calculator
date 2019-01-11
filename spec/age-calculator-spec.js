@@ -18,4 +18,13 @@ describe('AgeCalculator', function() {
       expect(user.ageInMercuryYears()).toEqual(133.33333333333334);
     });
   });
+
+  describe('ageInVenusYears', function() {
+    it('should calculate the user\'s age in Venus years', function() {
+      expect(user.ageInVenusYears()).toEqual(51.6129);
+    });
+  });
+
 });
+
+// Returns their age in Venus years. (A Venus year is .62 Earth years.)
