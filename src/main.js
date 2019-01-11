@@ -10,6 +10,7 @@ $(document).ready(function() {
   $('#user').submit(function(event){
     event.preventDefault();
     $('#user').hide();
+    $('#directions').hide();
     const birthday = $('input[type="date"]').val();
     const gender = $('#gender option:selected').val();
     const activityLevel = $('#activity-level option:selected').val();

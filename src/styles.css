@@ -1,29 +1,47 @@
 body {
-  background-image: linear-gradient(#101010, #000080)
+  background-image: linear-gradient(#101010, #000034);
 }
 
-h1 {
-  color: #e95c4b;
+.container h1 {
+  color: black;
+  font-size: 65px;
   text-align: center;
-  margin-top: 50px;
   font-weight: bolder;
 }
 
-h2 {
-  color: #e95c4b;
+.container h2 {
+  color: white;
+  font-weight: bolder;
+}
+
+.container h3 {
+  text-align: center;
+  color: #282828;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .star {
-  position: static;
-  height: 5px;
-  width: 5px;
-  background-color: green;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  z-index: -1;
+}
+
+.star::after {
+  background-color: white;
 }
 
 .container {
   margin-top: 50px;
-  padding: 50px;
-  background-color: rgba(255,255,255, .3)
+  background-color: rgba(255,255,255, .1);
+  padding: 20px;
+  margin-bottom: 50px;
+
+}
+
+#user {
+  margin: 30px 40px 0px 30px;
 }
 
 #output {
@@ -31,22 +49,20 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-
 label {
-  color: #e95c4b;
-  font-weight: bolder;
+  color: white;
+  font-weight: bold;
 }
 
 .planet {
-  background-color: rgba(245,245,245, .5);
+  background-color: rgba(245,245,245, .1);
   margin: 20px;
   padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button {
-  background-color: #e95c4b;
-  margin: 30px;
+  background-color: black;
   border: none;
   border-radius: 5px;
   color: white;
@@ -54,5 +70,5 @@ button {
 }
 
 button:hover {
-  background-color: #0e9ca5;
+  background-color: #101010;
 }
