@@ -6,7 +6,7 @@ export class AgeCalculator {
 
   calculateLifeExpectency(gender, activityLevel, lifestyle) {
     let expectencyEarthYears = 75;
-    (gender === "female") ? expectencyEarthYears += 5 : expectencyEarthYears -=3;
+    (gender === "female" || gender === "non-binary") ? expectencyEarthYears += 5 : expectencyEarthYears -=3;
     (activityLevel === "high") ? expectencyEarthYears += 3 : expectencyEarthYears -= 5;
     (lifestyle === "healthy") ? expectencyEarthYears += 3 : expectencyEarthYears -=2;
     return expectencyEarthYears;
