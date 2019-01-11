@@ -4,7 +4,7 @@ describe('AgeCalculator', function() {
   let user;
 
   beforeEach(function() {
-    user = new AgeCalculator(32);
+    user = new AgeCalculator(32, "female", "high", "healthy");
   });
 
   describe('constructor', function() {
@@ -39,16 +39,37 @@ describe('AgeCalculator', function() {
 
   describe('lifeExpectency', function() {
     it('should calculate the user\'s life expectency in Earth years based on user input', function() {
-      expect(user.lifeExpectency("female", "high", "healthy")).toEqual(86);
-      expect(user.lifeExpectency("female", "high", "unhealthy")).toEqual(81);
-      expect(user.lifeExpectency("female", "low", "healthy")).toEqual(78);
-      expect(user.lifeExpectency("female", "low", "unhealthy")).toEqual(73);
-      expect(user.lifeExpectency("male", "high", "healthy")).toEqual(78);
-      expect(user.lifeExpectency("male", "low", "healthy")).toEqual(70);
-      expect(user.lifeExpectency("male", "high", "unhealthy")).toEqual(73);
-      expect(user.lifeExpectency("male", "low", "unhealthy")).toEqual(65);
+      expect(user.lifeExpectency).toEqual(86);
+
+      const user2 = new AgeCalculator(32, "female", "high", "unhealthy");
+      expect(user2.lifeExpectency).toEqual(81);
+
+      const user3 = new AgeCalculator(32, "female", "low", "healthy");
+      expect(user3.lifeExpectency).toEqual(78);
+
+      const user4 = new AgeCalculator(32, "female", "low", "unhealthy");
+      expect(user4.lifeExpectency).toEqual(73);
+
+      const user5 = new AgeCalculator(32, "male", "high", "healthy");
+      expect(user5.lifeExpectency).toEqual(78);
+
+      const user6 = new AgeCalculator(32, "male", "low", "healthy");
+      expect(user6.lifeExpectency).toEqual(70);
+
+      const user7 = new AgeCalculator(32, "male", "high", "unhealthy");
+      expect(user7.lifeExpectency).toEqual(73);
+
+      const user8 = new AgeCalculator(32, "male", "low", "unhealthy");
+      expect(user8.lifeExpectency).toEqual(65);
 
     });
   });
+
+  // describe('calculateStats', function() {
+  //   it('should calculate the stats for a given planet', function() {
+  //     expect(user.calculateStats("mercury")).toEqual("Age: ");
+  //   });
+  // });
+
 
 });

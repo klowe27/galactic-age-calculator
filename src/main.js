@@ -5,6 +5,10 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
-  let user = new AgeCalculator(55);
+  let user = new AgeCalculator(32);
   $('#output').append(`<p>${user.ageInYears}</p>`);
+
+  // ((new Date())-(new Date(birthday)))/365/24/60/60/1000
+
+
 });

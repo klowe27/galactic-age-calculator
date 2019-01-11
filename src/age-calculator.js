@@ -1,6 +1,7 @@
 export class AgeCalculator {
-  constructor(ageInYears) {
+  constructor(ageInYears, gender, activityLevel, lifestyle) {
     this.ageInYears = ageInYears;
+    this.lifeExpectency = this.calculateLifeExpectency(gender, activityLevel, lifestyle);
   }
 
   mercuryYears(earthYears) {
@@ -19,19 +20,14 @@ export class AgeCalculator {
     return earthYears/11.86;
   }
 
-  lifeExpectency(gender, activityLevel, lifestyle) {
+  calculateLifeExpectency(gender, activityLevel, lifestyle) {
     let lifeExpectencyEarthYears = 75;
-    if (gender === "female") {
-      lifeExpectencyEarthYears += 5;
-    } else if (gender === "male") {
-      lifeExpectencyEarthYears -=3;
-    } else {
-      lifeExpectencyEarthYears += 0;
-    }
-
+    (gender === "female") ? lifeExpectencyEarthYears += 5 : lifeExpectencyEarthYears -=3;
     (activityLevel === "high") ? lifeExpectencyEarthYears += 3 : lifeExpectencyEarthYears -= 5;
     (lifestyle === "healthy") ? lifeExpectencyEarthYears += 3 : lifeExpectencyEarthYears -=2;
 
     return lifeExpectencyEarthYears;
   }
+
+
 }
