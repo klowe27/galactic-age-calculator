@@ -24,7 +24,7 @@
 // Make your application look nice and give it a solar theme!
 
 export class AgeCalculator {
-  // constructor(age) {
-  //   this.age = age;
-  // }
+  constructor(ageInYears) {
+    this.ageInYears = ageInYears;
+  }
 }
