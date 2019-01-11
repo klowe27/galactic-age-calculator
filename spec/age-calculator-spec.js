@@ -15,7 +15,7 @@ describe('AgeCalculator', function() {
 
   describe('ageInMercuryYears', function() {
     it('should calculate the user\'s age in Mercury years', function() {
-      expect(user.ageInMercuryYears()).toEqual(133.33);
+      expect(user.ageInMercuryYears()).toEqual(133.33333333333334);
     });
   });
 });
