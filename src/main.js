@@ -1,11 +1,12 @@
 import { AgeCalculator } from './age-calculator.js';
-import { createPlanetCards } from './user-interface-logic.js'
+import { createPlanetCards, createStars } from './user-interface-logic.js'
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
+  createStars();
   $('#user').submit(function(event){
     event.preventDefault();
     $('#user').hide();
@@ -15,7 +16,6 @@ $(document).ready(function() {
     const lifestyle = $('#lifestyle option:selected').val();
     const ageInYears = ((new Date())-(new Date(birthday)))/365/24/60/60/1000;
     const user = new AgeCalculator(ageInYears, gender, activityLevel, lifestyle);
-    console.log(user.calculateStats());
     createPlanetCards(user.calculateStats());
 
 

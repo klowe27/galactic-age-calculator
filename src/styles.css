@@ -1,3 +1,58 @@
+body {
+  background-image: linear-gradient(#101010, #000080)
+}
+
+h1 {
+  color: #e95c4b;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bolder;
+}
+
+h2 {
+  color: #e95c4b;
+}
+
+.star {
+  position: static;
+  height: 5px;
+  width: 5px;
+  background-color: green;
+}
+
 .container {
-  background-color: gray;
+  margin-top: 50px;
+  padding: 50px;
+  background-color: rgba(255,255,255, .3)
+}
+
+#output {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+label {
+  color: #e95c4b;
+  font-weight: bolder;
+}
+
+.planet {
+  background-color: rgba(245,245,245, .5);
+  margin: 20px;
+  padding: 30px;
+}
+
+button {
+  background-color: #e95c4b;
+  margin: 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+}
+
+button:hover {
+  background-color: #0e9ca5;
 }
