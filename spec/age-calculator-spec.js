@@ -65,11 +65,11 @@ describe('AgeCalculator', function() {
     });
   });
 
-  // describe('calculateStats', function() {
-  //   it('should calculate the stats for a given planet', function() {
-  //     expect(user.calculateStats("mercury")).toEqual("Age: ");
-  //   });
-  // });
+  describe('calculateStats', function() {
+    it('should store the user\'s age and life expectency for each planet', function() {
+      expect(user.calculateStats()).toEqual("[['Mercury','Age: 133.33333333333334, 'Years to live: 225.0000000000'], ['Venus','Age: 50, 'Years to live: 225.0000000000'], ['Mars','Age: 17.021276595744681, 'Years to live: 225.0000000000'], ['Jupiter','Age: 2.69814502529511, 'Years to live: 225.0000000000'] ");
+    });
+  });
 
 
 });
