@@ -27,7 +27,7 @@ describe('AgeCalculator', function() {
 
   describe('ageInMarsYears', function() {
     it('should calculate the user\'s age in Mars years', function() {
-      expect(user.ageInVenusYears()).toEqual('17.02');
+      expect(user.ageInMarsYears()).toEqual('17.02');
     });
   });
 

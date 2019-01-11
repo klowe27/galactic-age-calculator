@@ -36,4 +36,8 @@ export class AgeCalculator {
   ageInVenusYears() {
     return (this.ageInYears/.64).toFixed(2);
   }
+
+  ageInMarsYears() {
+    return (this.ageInYears/1.88).toFixed(2);
+  }
 }
