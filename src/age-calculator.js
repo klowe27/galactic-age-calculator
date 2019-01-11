@@ -30,6 +30,10 @@ export class AgeCalculator {
   }
 
   ageInMercuryYears() {
-    return this.ageInYears/.24;
+    return (this.ageInYears/.24).toFixed(2);
+  }
+
+  ageInVenusYears() {
+    return (this.ageInYears/.64).toFixed(2);
   }
 }
