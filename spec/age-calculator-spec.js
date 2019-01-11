@@ -4,7 +4,7 @@ describe('AgeCalculator', function() {
   let user;
 
   beforeEach(function() {
-    user = new AgeCalculator(32, "female", "high", "healthy");
+    user = new AgeCalculator(32);
   });
 
   describe('constructor', function() {
@@ -39,7 +39,15 @@ describe('AgeCalculator', function() {
 
   describe('lifeExpectency', function() {
     it('should calculate the user\'s life expectency in Earth years based on user input', function() {
-      expect(user.lifeExpectency().toEqual(80);
+      expect(user.lifeExpectency("female", "high", "healthy")).toEqual(86);
+      expect(user.lifeExpectency("female", "high", "unhealthy")).toEqual(81);
+      expect(user.lifeExpectency("female", "low", "healthy")).toEqual(78);
+      expect(user.lifeExpectency("female", "low", "unhealthy")).toEqual(73);
+      expect(user.lifeExpectency("male", "high", "healthy")).toEqual(78);
+      expect(user.lifeExpectency("male", "low", "healthy")).toEqual(70);
+      expect(user.lifeExpectency("male", "high", "unhealthy")).toEqual(73);
+      expect(user.lifeExpectency("male", "low", "unhealthy")).toEqual(65);
+
     });
   });
 
