@@ -5,6 +5,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
-  let userAge = new AgeCalculator(55);
-  $('#output').append(`<p>${userAge.age}</p>`);
+  let user = new AgeCalculator(55);
+  $('#output').append(`<p>${user.ageInYears}</p>`);
 });
