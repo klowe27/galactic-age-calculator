@@ -12,9 +12,9 @@ export function createStars() {
   for (let i = 0; i < 350; i++) {
     $("#stars").prepend(`<span class="star" style="left: ${randomNumber(width)}px; bottom: ${randomNumber(height)}px; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}); position: fixed;"></span>`);
   }
-  for (let i = 0; i < 200; i++) {
-    $('.star:odd').fadeIn(2000).fadeOut(2000);
-    $('.star:even').fadeOut(2500).fadeIn(2500);
+  for (let i = 0; i < 500; i++) {
+    $('.star:odd').fadeIn(2000).fadeOut(2200);
+    $('.star:even').fadeOut(4000).fadeIn(2500);
   }
 }
 
