@@ -18,7 +18,5 @@ $(document).ready(function() {
     const ageInYears = ((new Date())-(new Date(birthday)))/365/24/60/60/1000;
     const user = new AgeCalculator(ageInYears, gender, activityLevel, lifestyle);
     createPlanetCards(user.calculateStats());
-
-
   });
 });
