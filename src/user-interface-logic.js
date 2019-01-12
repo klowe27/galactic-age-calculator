@@ -10,7 +10,7 @@ export function createStars() {
   const height = $(window).height();
   const width = $(window).width();
   for (let i = 0; i < 10; i++) {
-    $("#stars").append(`<div class="star" style="left: ${randomNumber(width)}; top: ${randomNumber(height)}; background-color: rgba(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(1)})"></div>`);
+    $("#stars").append(`<div class="star" style="left: ${randomNumber(width)}; bottom: ${randomNumber(height)}; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}"></div>`);
     console.log(randomNumber(height));
   }
 }
