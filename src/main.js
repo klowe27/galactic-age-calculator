@@ -10,7 +10,6 @@ $(document).ready(function() {
   $('#user').submit(function(event){
     event.preventDefault();
     $('#user').hide();
-    $('#directions').hide();
     const birthday = $('input[type="date"]').val();
     const gender = $('#gender option:selected').val();
     const activityLevel = $('#activity-level option:selected').val();
@@ -18,5 +17,7 @@ $(document).ready(function() {
     const ageInYears = ((new Date())-(new Date(birthday)))/365/24/60/60/1000;
     const user = new AgeCalculator(ageInYears, gender, activityLevel, lifestyle);
     createPlanetCards(user.calculateStats());
+    $('#stars').empty();
+    createStars();
   });
 });

@@ -1,41 +1,39 @@
 body {
-  background-image: linear-gradient(#101010, #000034);
-  position: relative;
-  transform: none;
-  background-size: auto;
-}
-
-#stars {
-  position: block;
-  transform: none;
-  width: 1000;
-  height: 1000;
+  background-image: linear-gradient(#101010, #070721);
+  height: 100%;
+ transform: translateZ(0);
 }
 
 .star {
+  display: none;
   position: fixed;
   z-index: -1;
   height: 5px;
   width: 5px;
   border-radius: 5px;
+  opacity: .3;
 }
 
 .container {
-  margin-top: 50px;
-  background-color: rgba(255,255,255, .1);
+  margin-top: 30px;
+  background-color: rgba(255,255,255, .05);
   padding: 20px;
-  margin-bottom: 50px;
-
+  margin-bottom: 150px;
 }
-.container h1 {
-  color: 	#404040;
-  font-size: 65px;
+
+body h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 55px;
   text-align: center;
   font-weight: bolder;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .container h2 {
-  color: white;
+  font-family: 'Orbitron', sans-serif;
+  color: #B8B8B8;
   font-weight: bolder;
 }
 
@@ -61,32 +59,33 @@ body {
 }
 
 label {
-  color: white;
+  color: gray;
   font-weight: bold;
-}
-
-.headline {
-  background-color: rgba(0, 0, 0, .9);
-  margin: 20px;
-  padding: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .planet {
-  background-color: rgba(245,245,245, .1);
+  background-color: rgba(245,245,245, .05);
   margin: 20px;
   padding: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button {
+body button {
+  font-family: 'Orbitron', sans-serif;
   background-color: black;
   border: none;
   border-radius: 5px;
   color: white;
   padding: 20px;
+  margin-top: 20px;
 }
 
 button:hover {
   background-color: #101010;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-control {
+  opacity: .75;
 }

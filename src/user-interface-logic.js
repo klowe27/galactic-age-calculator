@@ -2,16 +2,19 @@ import $ from 'jquery';
 
 export function createPlanetCards(array) {
   array.forEach(function(element){
-    $('#output').append(`<div class="planet"><h2>${element[0]}</h2><p><strong>Age:</strong> ${element[1].toFixed(2)}</p><p><strong>Life Expectancy:</strong> ${element[2].toFixed(2)}</p><p><strong>Years to Live:</strong> ${element[3]}</p></div>`);
+    $('#output').append(`<span class="planet"><h2>${element[0]}</h2><p><strong>Age:</strong> ${element[1].toFixed(2)}</p><p><strong>Life Expectancy:</strong> ${element[2].toFixed(2)}</p><p><strong>Years to Live:</strong> ${element[3]}</p></span>`);
   });
 }
 
 export function createStars() {
   const height = $(window).height();
   const width = $(window).width();
-  for (let i = 0; i < 50; i++) {
-    $("#stars").append(`<div class="star" style="left: ${randomNumber(width)}; bottom: ${randomNumber(height)}; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}); position: fixed;"></div>`);
-    console.log(randomNumber(height));
+  for (let i = 0; i < 350; i++) {
+    $("#stars").prepend(`<span class="star" style="left: ${randomNumber(width)}px; bottom: ${randomNumber(height)}px; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}); position: fixed;"></span>`);
+  }
+  for (let i = 0; i < 200; i++) {
+    $('.star:odd').fadeIn(2000).fadeOut(2000);
+    $('.star:even').fadeOut(2500).fadeIn(2500);
   }
 }
 
