@@ -1,9 +1,9 @@
 import { AgeCalculator } from './age-calculator.js';
 import { createPlanetCards, createStars } from './user-interface-logic.js'
-import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 
 $(document).ready(function() {
   createStars();
