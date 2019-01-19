@@ -9,15 +9,17 @@ export function createPlanetCards(array) {
 export function createStars() {
   const height = $(window).height();
   const width = $(window).width();
+  let stars = "";
   for (let i = 0; i < 350; i++) {
-    $("#stars").prepend(`<span class="star" style="left: ${randomNumber(width)}px; bottom: ${randomNumber(height)}px; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)}); position: fixed;"></span>`);
+    stars += `<span class="star" style="left: ${randomNumber(width)}px; bottom: ${randomNumber(height)}px; background-color: rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)});"></span>`;
   }
-  for (let i = 0; i < 500; i++) {
-    $('.star:odd').fadeIn(2000).fadeOut(2200);
-    $('.star:even').fadeOut(4000).fadeIn(2500);
-  }
+  $('body').append(stars);
+  setInterval(function(){
+    $('.star:odd').fadeIn(4000).fadeOut(2000);
+    $('.star:even').fadeOut(6000).fadeIn(3000);
+  }, 1000);
 }
 
 function randomNumber(max) {
-  return Math.floor(Math.random()*max+1)
+  return Math.floor(Math.random()*max+1);
 }

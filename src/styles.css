@@ -1,7 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: linear-gradient(#101010, #070721);
   height: 100%;
- transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .star {
