@@ -27,20 +27,4 @@ export class AgeCalculator {
     });
     return results;
   }
-
-  mercuryYears(earthYears) {
-    return earthYears/.24;
-  }
-
-  venusYears(earthYears) {
-    return earthYears/.64;
-  }
-
-  marsYears(earthYears) {
-    return earthYears/1.88;
-  }
-
-  jupiterYears(earthYears) {
-    return earthYears/11.86;
-  }
 }
